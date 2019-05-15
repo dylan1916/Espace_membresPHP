@@ -23,34 +23,25 @@ if (isset($_POST['formconnexion']))
             header("Location: profil.php?id=".$_SESSION['id']);
         }
         else
-        {
-           // $erreur = "Mauvais mail/à confirmer ou mot de passe !";
-            ///////////////////////////////////////////////////////////////////////////////////////////        
-                    
-                    ?>
-                                <script>
-                                function myFunction() {
-                                alert("Mauvais mail/à confirmer ou mot de passe !");
-                                }
-                                </script>
-
-                    <?php
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-
+        {              
+            ?>
+                <script>
+                    function myFunction() {
+                     alert("Mauvais mail/à confirmer ou mot de passe !");
+                     }
+                 </script>
+            <?php
         }
     }
     else
     {
-       // $erreur = "Tous les champs doivent être complétés !";
-
         ?>
-        <script>
-        function myFunction() {
-        alert("Tous les champs doivent être complétés !");
-        }
-        </script>
-
-<?php
+             <script>
+                function myFunction() {
+                alert("Tous les champs doivent être complétés !");
+                }
+            </script>
+        <?php
     }
 } 
 
@@ -72,7 +63,6 @@ if (isset($_POST['formconnexion']))
            <input type="email" name="mailconnect" placeholder="E-mail">
            <input type="password" name="mdpconnect" placeholder="Mot de passe">
            <input type="submit" name="formconnexion" value="Se connecter" onclick="myFunction()">
-        <!-- RAJOUTER ONCLICK SUR LES BOUTONS -->
         </form>
         
         <?php

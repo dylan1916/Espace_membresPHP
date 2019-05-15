@@ -56,8 +56,6 @@ if (isset($_POST['forminscription']))
                         }
                         else
                         {
-                            //$erreur = "Vos mots de passes ne correspondent pas !";
-
                             ?>
                                 <script>
                                 function myFunction() {
@@ -69,8 +67,6 @@ if (isset($_POST['forminscription']))
                     }
                     else
                     {
-                        //$erreur = "Adresse mail déjà utilisée !";
-
                         ?>
                             <script>
                             function myFunction() {
@@ -82,8 +78,6 @@ if (isset($_POST['forminscription']))
                 }
                 else
                 {
-                    //$erreur = "Votre adresse mail n'est pas valide !";
-
                     ?>
                         <script>
                         function myFunction() {
@@ -95,8 +89,6 @@ if (isset($_POST['forminscription']))
             }
             else
             {
-                //$erreur = "Vos adresses mail ne correspondent pas !";
-
                 ?>
                     <script>
                     function myFunction() {
@@ -108,8 +100,6 @@ if (isset($_POST['forminscription']))
         }
         else
         {
-            //$erreur = "Votre pseudo ne doit pas dépasser 255 caractères !";
-
             ?>
                 <script>
                 function myFunction() {
@@ -121,8 +111,6 @@ if (isset($_POST['forminscription']))
     }
     else
     {
-       // $erreur = "Tous les champs doivent être complétés !";
-       
         ?>
             <script>
             function myFunction() {
@@ -170,16 +158,6 @@ if (isset($_POST['forminscription']))
             <br/> 
             <input type="submit" name="forminscription" value="Je m'inscris" onclick="myFunction()">
         </form>
-
-        <?php
-
-            if (isset($erreur))
-            {
-                echo '<font color="red">'.$erreur.'</font>';
-            }
-
-        ?>
-
     </div>
 </body>
 </html>
