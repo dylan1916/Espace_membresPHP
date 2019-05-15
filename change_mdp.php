@@ -69,17 +69,41 @@ if (isset($_POST['recup_submit'], $_POST['recup_mail']))
             }
             else
             {
-                $error = "Cette adresse mail n'est pas enregistrée";
+                //$error = "Cette adresse mail n'est pas enregistrée";
+
+                ?>
+                    <script>
+                    function myFunction() {
+                    alert("Cette adresse mail n'est pas enregistrée");
+                    }
+                    </script>
+                <?php
             }
         }
         else
         {
-            $error = "Adresse mail invalide";
+            //$error = "Adresse mail invalide";
+
+            ?>
+                <script>
+                    function myFunction() {
+                    alert("Adresse mail invalide");
+                    }
+                </script>
+            <?php
         }
     }
     else
     {
-        $error = "Veuillez entrer votre adresse mail !";
+       // $error = "Veuillez entrer votre adresse mail !";
+
+        ?>
+            <script>
+                function myFunction() {
+                alert("Veuillez entrer votre adresse mail !");
+                 }
+            </script>
+        <?php
     }
 }
 
@@ -101,13 +125,29 @@ if (isset($_POST['verif_submit'], $_POST['verif_code']))
         }
         else
         {
-            $error = "Code invalide";
+            //$error = "Code invalide";
+
+            ?>
+                <script>
+                    function myFunction() {
+                    alert("Code invalide");
+                    }
+                </script>
+            <?php   
         }
 
     }
     else
     {
-        $error = "Veuillez entrer votre code de confirmation";
+        //$error = "Veuillez entrer votre code de confirmation";
+
+        ?>
+            <script>
+                function myFunction() {
+                alert("Veuillez entrer votre code de confirmation");
+                 }
+            </script>
+        <?php        
     }
 }
 
@@ -140,23 +180,55 @@ if (isset($_POST['change_submit']))
                 }
                 else
                 {
-                    $error = "Vos mots de passes ne correspondent pas";            
+                    //$error = "Vos mots de passes ne correspondent pas";     
+                    
+                    ?>
+                        <script>
+                            function myFunction() {
+                            alert("Vos mots de passes ne correspondent pas");
+                            }
+                        </script>
+                     <?php 
                 }
             }
             else
             {
-                $error = "Veuillez remplir tous les champs";
+                //$error = "Veuillez remplir tous les champs";
+
+                ?>
+                    <script>
+                        function myFunction() {
+                        alert("Veuillez remplir tous les champs");
+                        }
+                     </script>
+                <?php 
             }
         }
         else
         {
-            $error = "Veuillez valider votre code de vérification qui vous a été envoyé par mail";
+            //$error = "Veuillez valider votre code de vérification qui vous a été envoyé par mail";
+
+            ?>
+                <script>
+                     function myFunction() {
+                    alert("Veuillez valider votre code de vérification qui vous a été envoyé par mail");
+                    }
+                 </script>
+            <?php
         }
         
     }
     else
     {
-        $error = "Veuillez remplir tous les champs";
+       // $error = "Veuillez remplir tous les champs";
+
+        ?>
+              <script>
+                 function myFunction() {
+                alert("Veuillez remplir tous les champs");
+                }
+             </script>
+        <?php
     }
 }
 
@@ -180,7 +252,7 @@ if (isset($_POST['change_submit']))
         <br/><br/>
         <form action="" method="post">
             <input type="number" name="verif_code" placeholder="Code de vérification"><br/><br/>
-            <input type="submit" value="Valider" name="verif_submit">
+            <input type="submit" value="Valider" name="verif_submit" onclick="myFunction()">
             <?php  if (isset($error)) echo $error ?>
         </form>
     
@@ -190,14 +262,14 @@ if (isset($_POST['change_submit']))
         <form action="" method="post">
             <input type="password" name="change_mdp" placeholder="Nouveau mot de passe"><br/><br/>
             <input type="password" name="change_mdpc" placeholder="Confirmation du mot de passe"><br/><br/>
-            <input type="submit" value="Valider" name="change_submit">
+            <input type="submit" value="Valider" name="change_submit" onclick="myFunction()">
             <?php  if (isset($error)) echo $error ?>
         </form>
 
     <?php } else { ?>
         <form action="" method="post">
             <input type="email" name="recup_mail" placeholder="Votre adresse email"><br/><br/>
-            <input type="submit" value="Valider" name="recup_submit">
+            <input type="submit" value="Valider" name="recup_submit" onclick="myFunction()">
             <?php  if (isset($error)) echo $error ?>
         </form>
     <?php } ?>

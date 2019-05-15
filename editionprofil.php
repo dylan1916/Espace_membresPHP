@@ -39,6 +39,7 @@ if (isset($_SESSION['id']))
         else
         {
             $msg = "Vos deux mots de passes ne correspondent pas !";
+            
         }
     }
 

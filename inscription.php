@@ -56,32 +56,80 @@ if (isset($_POST['forminscription']))
                         }
                         else
                         {
-                            $erreur = "Vos mots de passes ne correspondent pas !";
+                            //$erreur = "Vos mots de passes ne correspondent pas !";
+
+                            ?>
+                                <script>
+                                function myFunction() {
+                                alert("Vos mots de passes ne correspondent pas !");
+                                }
+                                </script>
+                            <?php
                         }
                     }
                     else
                     {
-                        $erreur = "Adresse mail déjà utilisée !";
+                        //$erreur = "Adresse mail déjà utilisée !";
+
+                        ?>
+                            <script>
+                            function myFunction() {
+                            alert("Adresse mail déjà utilisée !");
+                            }
+                            </script>
+                        <?php
                     }
                 }
                 else
                 {
-                    $erreur = "Votre adresse mail n'est pas valide !";
+                    //$erreur = "Votre adresse mail n'est pas valide !";
+
+                    ?>
+                        <script>
+                        function myFunction() {
+                        alert("Votre adresse mail n'est pas valide !");
+                        }
+                        </script>
+                    <?php
                 }
             }
             else
             {
-                $erreur = "Vos adresses mail ne correspondent pas !";
+                //$erreur = "Vos adresses mail ne correspondent pas !";
+
+                ?>
+                    <script>
+                    function myFunction() {
+                    alert("Vos adresses mail ne correspondent pas !");
+                    }
+                    </script>
+                <?php
             }
         }
         else
         {
-            $erreur = "Votre pseudo ne doit pas dépasser 255 caractères !";
+            //$erreur = "Votre pseudo ne doit pas dépasser 255 caractères !";
+
+            ?>
+                <script>
+                function myFunction() {
+                alert("Votre pseudo ne doit pas dépasser 255 caractères !");
+                }
+                </script>
+            <?php
         }
     }
     else
     {
-        $erreur = "Tous les champs doivent être complétés !";
+       // $erreur = "Tous les champs doivent être complétés !";
+       
+        ?>
+            <script>
+            function myFunction() {
+            alert("Tous les champs doivent être complétés !");
+            }
+            </script>
+        <?php
     }  
 }
 
@@ -120,7 +168,7 @@ if (isset($_POST['forminscription']))
             <input type="password" placeholder="Confirmer votre mot de passe" id="mdp2" name="mdp2">
             <br/>
             <br/> 
-            <input type="submit" name="forminscription" value="Je m'inscris">
+            <input type="submit" name="forminscription" value="Je m'inscris" onclick="myFunction()">
         </form>
 
         <?php

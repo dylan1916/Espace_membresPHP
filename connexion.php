@@ -24,12 +24,33 @@ if (isset($_POST['formconnexion']))
         }
         else
         {
-            $erreur = "Mauvais mail/à confirmer ou mot de passe !";
+           // $erreur = "Mauvais mail/à confirmer ou mot de passe !";
+            ///////////////////////////////////////////////////////////////////////////////////////////        
+                    
+                    ?>
+                                <script>
+                                function myFunction() {
+                                alert("Mauvais mail/à confirmer ou mot de passe !");
+                                }
+                                </script>
+
+                    <?php
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
         }
     }
     else
     {
-        $erreur = "Tous les champs doivent être complétés !";
+       // $erreur = "Tous les champs doivent être complétés !";
+
+        ?>
+        <script>
+        function myFunction() {
+        alert("Tous les champs doivent être complétés !");
+        }
+        </script>
+
+<?php
     }
 } 
 
@@ -50,7 +71,8 @@ if (isset($_POST['formconnexion']))
         <form method="POST" action="">
            <input type="email" name="mailconnect" placeholder="E-mail">
            <input type="password" name="mdpconnect" placeholder="Mot de passe">
-           <input type="submit" name="formconnexion" value="Se connecter">
+           <input type="submit" name="formconnexion" value="Se connecter" onclick="myFunction()">
+        <!-- RAJOUTER ONCLICK SUR LES BOUTONS -->
         </form>
         
         <?php
